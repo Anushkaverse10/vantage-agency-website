@@ -7,8 +7,8 @@ Designed with a focus on **minimalism, typography, and structured layouts**.
 
 ## 🌐 Live Preview
 
-> Add your deployed link here
-> `https://forge-studio-static-web-gdg-project.netlify.app/`
+deployed link :
+https://forge-studio-static-web-gdg-project.netlify.app/
 
 ---
 
