@@ -1,222 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forge Studio — Elevating Brand Stories</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Lora:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/home.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEXUS — Elevating Brand Stories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-  <header class="nav" id="siteNav">
+  <nav class="navbar" id="navbar">
     <div class="nav-wrap">
-      <a href="index.html" class="logo">
-        <span class="logo-box">F</span>
-        ORGE
-      </a>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html" class="nav-link is-active">Home</a></li>
-        <li><a href="pages/services.html" class="nav-link">Services</a></li>
-        <li><a href="pages/case-studies.html" class="nav-link">Case Studies</a></li>
-        <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      <a href="index.html" class="logo">NEXUS</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/case-study.html">Case Study</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
       </ul>
-      <a href="pages/contact.html" class="nav-cta">Start a Project ↗</a>
-      <button class="burger" id="burgerBtn" onclick="openMenu()" aria-label="Open menu">
+      <a href="pages/contact.html" class="btn-nav">Start a Project</a>
+      <button class="burger" id="burger" onclick="toggleNav()">
         <span></span><span></span><span></span>
       </button>
     </div>
-
-    <div class="mobile-panel" id="mobilePanel">
-      <button class="mobile-close" onclick="closeMenu()">✕</button>
-      <ul>
-        <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-        <li><a href="pages/services.html" onclick="closeMenu()">Services</a></li>
-        <li><a href="pages/case-studies.html" onclick="closeMenu()">Case Studies</a></li>
-        <li><a href="pages/contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>
-      <a href="pages/contact.html" class="mobile-cta">Start a Project ↗</a>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" onclick="toggleNav()">Home</a>
+      <a href="pages/services.html" onclick="toggleNav()">Services</a>
+      <a href="pages/case-study.html" onclick="toggleNav()">Case Study</a>
+      <a href="pages/contact.html" onclick="toggleNav()">Contact</a>
     </div>
-  </header>
+  </nav>
 
   <section class="hero">
-    <div class="hero-top-bar">
-      <span>Digital Creative Agency</span>
-      <span>Est. 2026</span>
-      <span>Kolkata, India</span>
-    </div>
-    <div class="hero-body g-wrap">
-      <div class="hero-headline-col">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <p class="label">DIGITAL CURATORS</p>
         <h1 class="hero-title">
           Elevating<br/>
-          <em>Brand Stories</em><br/>
-          With&nbsp;Intent.
+          <em>Brand</em><br/>
+          Stories With Intent.
         </h1>
-        <div class="hero-side-text">
-          <p>We don't just build interfaces — we curate experiences through rigorous precision and editorial authority.</p>
-          <div class="hero-actions">
-            <a href="pages/case-studies.html" class="btn-fill">View Our Work</a>
-            <a href="pages/services.html" class="btn-line">Services →</a>
-          </div>
+        <p class="hero-sub">We don't just build interfaces. We curate experiences through rigorous precision and editorial authority.</p>
+        <div class="hero-btns">
+          <a href="pages/case-study.html" class="btn-primary">View Showcase</a>
+          <a href="pages/services.html" class="btn-text">The Methodology →</a>
         </div>
       </div>
-      <div class="hero-img-col">
-        <div class="hero-img-stack">
-          <div class="hero__img hero__img--main">
-  <img src="images/hero-img.jpg" alt="Brand Vision">
-          </div>
+      <div class="hero-right">
+        <div class="hero-img-single">
+        <img src="images/hero.png" alt="Hero Image">
         </div>
       </div>
     </div>
-    <div class="hero-stat-row">
-      <div class="hero-stat"><strong>120+</strong><span>Projects Delivered</span></div>
-      <div class="hero-stat-sep"></div>
-      <div class="hero-stat"><strong>98%</strong><span>Client Retention</span></div>
-      <div class="hero-stat-sep"></div>
-      <div class="hero-stat"><strong>2.4×</strong><span>Avg. Conversion Lift</span></div>
-      <div class="hero-stat-sep"></div>
-      <div class="hero-stat"><strong>8yr</strong><span>In the Industry</span></div>
-    </div>
   </section>
 
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <span>Script Writing</span><b>—</b>
-      <span>Video Editing</span><b>—</b>
-      <span>Digital Marketing</span><b>—</b>
-      <span>Performance</span><b>—</b>
-      <span>Product Design</span><b>—</b>
-      <span>Script Writing</span><b>—</b>
-      <span>Video Editing</span><b>—</b>
-      <span>Digital Marketing</span><b>—</b>
-      <span>Performance</span><b>—</b>
-      <span>Product Design</span><b>—</b>
-    </div>
-  </div>
+ <section class="toolkit">
+  <div class="container">
 
-  <div class="toolkit-grid">
+    <p class="label">EXPERTISE</p>
+    <h2 class="section-title">The Precision Toolkit</h2>
+    <p class="section-sub">
+      A curated selection of technical and creative disciplines aimed at total brand transformation.
+    </p>
 
-  <div class="tk-card">
-    <h3>Script Writing</h3>
-    <p>Articulating the core narrative of your brand through cinematic dialogue and strategic storytelling.</p>
-  </div>
+    <div class="toolkit-grid">
 
-  <div class="tk-card">
-    <h3>Digital Marketing</h3>
-    <p>Omnichannel strategies that place your message in the hands of the right curators.</p>
-  </div>
-
-  <div class="tk-card large">
-    <h3>Product Design</h3>
-    <p>Architecting digital ecosystems that prioritize user focus and high-end visual utility.</p>
-  </div>
-
-  <div class="tk-card">
-    <h3>Video Editing</h3>
-    <p>High-end post-production that maintains the integrity of your visual language.</p>
-  </div>
-
-  <div class="tk-card">
-    <h3>Performance</h3>
-    <p>Data-driven scaling that respects the aesthetic soul of your campaigns.</p>
-  </div>
-
-</div>
-
-  <section class="selected-work pad-section bg-ink">
-    <div class="g-wrap">
-      <div class="section-label light">SELECTED CASE STUDIES</div>
-      <h2 class="display-heading light">Work that<br/><em>speaks.</em></h2>
-      <div class="work-grid">
-        <a href="pages/case-studies.html" class="work-item work-item-large reveal">
-          <div class="work-img swatch-amber">
-            <span class="work-category">Editorial Web Design / Branding</span>
-          </div>
-          <div class="work-meta">
-            <div>
-              <p class="work-year">2024</p>
-              <h3>Lumière Atelier</h3>
-            </div>
-            <span class="work-arrow">↗</span>
-          </div>
-        </a>
-        <a href="pages/case-studies.html" class="work-item reveal">
-          <div class="work-img swatch-clay">
-            <span class="work-category">Performance Marketing / Content</span>
-          </div>
-          <div class="work-meta">
-            <div>
-              <p class="work-year">2023</p>
-              <h3>Kinetic Retail</h3>
-            </div>
-            <span class="work-arrow">↗</span>
-          </div>
-        </a>
+      <div class="toolkit-card">
+        <div class="icon">✍️</div>
+        <h3>Script Writing</h3>
+        <p>Articulating the core narrative of your brand through cinematic dialogue and strategic storytelling.</p>
       </div>
-      <div class="work-footer">
-        <a href="pages/case-studies.html" class="btn-fill btn-fill-light">All Case Studies ↗</a>
+
+      <div class="toolkit-card">
+        <div class="icon">🎬</div>
+        <h3>Video Editing</h3>
+        <p>High-end post-production that maintains the integrity of your visual language.</p>
+      </div>
+
+      <div class="toolkit-card">
+        <div class="icon">📈</div>
+        <h3>Performance</h3>
+        <p>Data-driven scaling that respects the aesthetic soul of your campaigns.</p>
+      </div>
+
+      <div class="toolkit-card">
+        <div class="icon">📐</div>
+        <h3>Product Design</h3>
+        <p>Architecting digital ecosystems that prioritize user focus and high-end visual utility.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <section class="home-cases">
+    <div class="container">
+      <p class="label">SELECTED CASE STUDIES</p>
+      <div class="cases-grid">
+        <div class="case-item">
+          <div class="case-img-wrap">
+            <img src="images/sofa.png" alt="Lumière Atelier"/>
+          </div>
+          <div class="case-info">
+            <span class="case-tag">EDITORIAL WEB DESIGN / BRANDING</span>
+            <h3>LUMIÈRE ATELIER</h3>
+            <p class="case-year">2024</p>
+          </div>
+        </div>
+        <div class="case-item">
+          <div class="case-img-wrap">
+            <img src="images/shelf.png" alt="Kinetic Retail"/>
+          </div>
+          <div class="case-info">
+            <span class="case-tag">PERFORMANCE MARKETING / CONTENT</span>
+            <h3>KINETIC RETAIL</h3>
+            <p class="case-year">2023</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="home-cta">
-    <div class="g-wrap home-cta-inner">
-      <div class="home-cta-text">
-        <div class="section-label">LET'S TALK</div>
-        <h2 class="display-heading">Ready to refine<br/><em>your narrative?</em></h2>
-      </div>
-      <div class="home-cta-action">
-        <p>We are currently accepting new projects. Let's build something intentional together.</p>
-        <a href="pages/contact.html" class="btn-fill">Start a Project ↗</a>
-      </div>
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <h2>Ready to refine your narrative?</h2>
+      <p>We are currently accepting new projects for Q3 2024. Let's build something intentional together.</p>
+      <a href="pages/contact.html" class="btn-primary">Start a Project</a>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="g-wrap footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo logo-light">
-          <span class="logo-box logo-box-light">F</span>FORGE
-        </a>
-        <p>Crafting digital authority<br/>for brands that lead.</p>
+    <div class="container footer-inner">
+      <a href="index.html" class="logo logo-light">NEXUS</a>
+      <p class="footer-copy">© 2026 NEXUS Agency. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="pages/services.html">Services</a>
+        <a href="pages/case-study.html">Case Study</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
       </div>
-      <div class="footer-nav">
-        <div class="footer-col">
-          <h4>Pages</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/services.html">Services</a></li>
-            <li><a href="pages/case-studies.html">Case Studies</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="pages/services.html">Script Writing</a></li>
-            <li><a href="pages/services.html">Video Editing</a></li>
-            <li><a href="pages/services.html">Digital Marketing</a></li>
-            <li><a href="pages/services.html">Product Design</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="pages/contact.html">hello@forge.studio</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bar g-wrap">
-      <p>© 2025 Forge Studio. All rights reserved.</p>
-      <div><a href="#">Privacy</a><a href="#">Terms</a></div>
     </div>
   </footer>
 
-  <script src="/js/app.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
